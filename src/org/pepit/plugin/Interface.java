@@ -63,6 +63,14 @@ public interface Interface {
 			int numQuestion);
 	
 	/**
+	 * Return the number of question(s) for an exercise and a module.
+	 * @param selectedExercise Number of selected exercise
+	 * @param selectedModule Number of selected module
+	 * @return Number of question(s)
+	 */
+	public int getNbQuestion(int selectedExercise, int selectedModule);
+	
+	/**
 	 * Method called before starting a sequence of questions.
 	 */
 	public void startQuestionSequence();
