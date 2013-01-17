@@ -2,7 +2,6 @@ package org.pepit.plugin;
 
 import java.io.File;
 
-import android.app.Activity;
 import android.content.Context;
 import android.widget.LinearLayout;
 
@@ -51,16 +50,14 @@ public interface Interface {
 	/**
 	 * Return a layout to display one question.
 	 * @param ctx Current Context
-	 * @param act Current Activity
 	 * @param rootResource Root directory for resources
 	 * @param selectedExercise Number of selected exercise
 	 * @param selectedModule Number of selected module
 	 * @param numQuestion Number of question
 	 * @return Layout to display
 	 */
-	public LinearLayout getQuestionLayout(Context ctx, Activity act,
-			File rootResource, int selectedExercise, int selectedModule,
-			int numQuestion);
+	public LinearLayout getQuestionLayout(Context ctx, File rootResource, 
+			int selectedExercise, int selectedModule, int numQuestion);
 	
 	/**
 	 * Return the number of question(s) for an exercise and a module.
@@ -85,6 +82,22 @@ public interface Interface {
 	 * @return Text
 	 */
 	public String getNextQuestionButtonText();
+	
+	/**
+	 * Check if the current answer is the right one.
+	 * @return TRUE if right
+	 */
+	public boolean currentAnswerIsRight();
+	
+	/**
+	 * Ask the plugin to show to the user that her current answer is right. 
+	 */
+	public void showAnswerIsRight();
+	
+	/**
+	 * Ask the plugin to show to the user that her current answer is wrong. 
+	 */
+	public void showAnswerIsWrong();
 	
 	/**
 	 * Return the current global score for the plugin.
