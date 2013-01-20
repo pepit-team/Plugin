@@ -65,7 +65,7 @@ public interface Interface {
 	 * @param selectedModule Number of selected module
 	 * @return Number of question(s)
 	 */
-	public int getNbQuestion(int selectedExercise, int selectedModule);
+	public int getQuestionCount(int selectedExercise, int selectedModule);
 	
 	/**
 	 * Method called before starting a sequence of questions.
