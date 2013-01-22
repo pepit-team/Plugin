@@ -26,4 +26,23 @@ public enum Subject {
 		assert false; // should never reach this line!
 		return("");
 	}
+	
+	public String toShortName() {
+		switch(this) {
+			case FRENCH:
+				return("francais");
+			case MATHEMATICS:
+				return("maths");
+			case MISCELLANEOUS:
+				return("divers");
+			case CONJUGATION:
+				return("conjugaison");
+			case SECONDARY1:
+				return("premieresecondaire");
+			case SECONDARY2:
+				return("deuxiemesecondaire");
+		}
+		assert false; // should never reach this line!
+		return("");
+	}
 }

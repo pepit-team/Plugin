@@ -44,4 +44,35 @@ public enum Level {
 		assert false; // should never reach this line!
 		return("");
 	}
+	
+	public String toShortName() {
+		switch(this) {
+			case M:
+				return("m");
+			case P1:
+				return("p1");
+			case P2:
+				return("p2)");
+			case P3:
+				return("p3");
+			case P4:
+				return("p4");
+			case P5:
+				return("p5");
+			case P6:
+				return("p6");
+			case C:
+				return("c");
+			case T:
+				return("t");
+			case ES:
+				return("es");
+			case PT:
+				return("pt");
+			case S:
+				return("s");
+		}
+		assert false; // should never reach this line!
+		return("");
+	}
 }
