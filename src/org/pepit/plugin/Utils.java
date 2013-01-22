@@ -1,7 +1,7 @@
 /**
  * @file org/pepit/plugin/Utils.java
  * 
- * PepitModel: an educational software
+ * PepitMobil: an educational software
  * This file is a part of the PepitMobil environment
  * http://pepit.be
  *
