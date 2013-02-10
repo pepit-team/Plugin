@@ -136,9 +136,12 @@ public interface Interface {
 	public void showAnswerIsWrong();
 
 	/**
-	 * Return the current global score for the plugin.
+	 * Return the number of points for one right answer.
 	 * 
-	 * @return Score
-	 */
-	public int getScore();
+	 * @param selectedExercise
+	 *            Number of selected exercise
+	 * @return Number of points
+	 */	
+	public int getPointsRightAnswer(int selectedExercise);
+	
 }
