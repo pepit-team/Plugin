@@ -26,38 +26,19 @@ package org.pepit.plugin;
 public enum Subject {
     FRENCH, MATHEMATICS, MISCELLANEOUS, CONJUGATION, SECONDARY1, SECONDARY2;
 
-    public String toFullName() {
+    public String toName() {
 	switch (this) {
-	case FRENCH:
-	    return ("Français");
-	case MATHEMATICS:
-	    return ("Mathématiques");
-	case MISCELLANEOUS:
-	    return ("Divers");
-	case CONJUGATION:
-	    return ("Conjugaison");
-	case SECONDARY1:
-	    return ("1ère Secondaire");
-	case SECONDARY2:
-	    return ("2ème Secondaire");
-	}
-	assert false; // should never reach this line!
-	return ("");
-    }
-
-    public String toShortName() {
-	switch (this) {
-	case FRENCH:
+	case FRENCH: // Français
 	    return ("francais");
-	case MATHEMATICS:
+	case MATHEMATICS: // Mathématiques
 	    return ("maths");
-	case MISCELLANEOUS:
+	case MISCELLANEOUS: // Divers
 	    return ("divers");
-	case CONJUGATION:
+	case CONJUGATION: // Conjugaison
 	    return ("conjugaison");
-	case SECONDARY1:
+	case SECONDARY1: // 1ère Secondaire
 	    return ("premieresecondaire");
-	case SECONDARY2:
+	case SECONDARY2: // 2ème Secondaire
 	    return ("deuxiemesecondaire");
 	}
 	assert false; // should never reach this line!

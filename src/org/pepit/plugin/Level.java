@@ -26,62 +26,31 @@ package org.pepit.plugin;
 public enum Level {
     M, P1, P2, P3, P4, P5, P6, C, T, ES, PT, S;
 
-    public String toFullName() {
+    public String toName() {
 	switch (this) {
-	case M:
-	    return ("Maternelles (à partir de 4 ans)");
-	case P1:
-	    return ("Niveau 1 (à partir de 7 ans)");
-	case P2:
-	    return ("Niveau 2 (à partir de 8 ans)");
-	case P3:
-	    return ("Niveau 3 (à partir de 9 ans)");
-	case P4:
-	    return ("Niveau 4 (à partir de 10 ans)");
-	case P5:
-	    return ("Niveau 5 (à partir de 11 ans)");
-	case P6:
-	    return ("Niveau 6 (à partir de 12 ans)");
-	case C:
-	    return ("Conjugaison (à partir de 8 ans)");
-	case T:
-	    return ("Tables Mult. (à partir de 8 ans)");
-	case ES:
-	    return ("ES Ens. Spécial (Pour tous)");
-	case PT:
-	    return ("PT Pour tous ! (de 5 à 75 ans et plus !)");
-	case S:
-	    return ("S Secondaire (à partir de 12 ans)");
-	}
-	assert false; // should never reach this line!
-	return ("");
-    }
-
-    public String toShortName() {
-	switch (this) {
-	case M:
+	case M: // Maternelles (à partir de 4 ans)
 	    return ("m");
-	case P1:
+	case P1: // Niveau 1 (à partir de 7 ans)
 	    return ("p1");
-	case P2:
+	case P2: // Niveau 2 (à partir de 8 ans)
 	    return ("p2)");
-	case P3:
+	case P3: // Niveau 3 (à partir de 9 ans)
 	    return ("p3");
-	case P4:
+	case P4: // Niveau 4 (à partir de 10 ans)
 	    return ("p4");
-	case P5:
+	case P5: // Niveau 5 (à partir de 11 ans)
 	    return ("p5");
-	case P6:
+	case P6: // Niveau 6 (à partir de 12 ans)
 	    return ("p6");
-	case C:
+	case C: // Conjugaison (à partir de 8 ans)
 	    return ("c");
-	case T:
+	case T: // Tables Mult. (à partir de 8 ans)
 	    return ("t");
-	case ES:
+	case ES: // ES Ens. Spécial (Pour tous)
 	    return ("es");
-	case PT:
+	case PT: // PT Pour tous ! (de 5 à 75 ans et plus !)
 	    return ("pt");
-	case S:
+	case S: // S Secondaire (à partir de 12 ans)
 	    return ("s");
 	}
 	assert false; // should never reach this line!

@@ -37,9 +37,9 @@ public class Utils {
 	String name = new String();
 	org.pepit.plugin.Info info = plugin.getInfo();
 
-	name += info.level.toShortName();
+	name += info.level.toName();
 	name += "_";
-	name += info.subject.toShortName();
+	name += info.subject.toName();
 	name += "_";
 	name += info.theme;
 	name += ".zip";
