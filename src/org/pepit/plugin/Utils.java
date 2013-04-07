@@ -26,10 +26,10 @@ package org.pepit.plugin;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
 import java.util.Enumeration;
 import java.util.zip.ZipFile;
 
-import dalvik.system.DexClassLoader;
 import dalvik.system.DexFile;
 
 import android.content.Context;
@@ -75,24 +75,19 @@ public class Utils {
 	    String pluginFileName, String className) throws IOException,
 	    ClassNotFoundException {
 	String zipFileName = Environment.getExternalStorageDirectory()
-		 .getPath() + "/pepitmobil/" + pluginFileName + ".zip";
+		.getPath() + "/pepitmobil/" + pluginFileName + ".zip";
 	File dexClasses = new File(zipFileName);
 
-	Log.d("DEX", "name: " + dexClasses.getAbsolutePath());
-	Log.d("DEX", "classname: " + className);
+	DexFile dexFile = DexFile.loadDex(dexClasses.getAbsolutePath(), context
+		.getDir("pepitmobil", Context.MODE_PRIVATE).getAbsolutePath()
+		+ "/outputdexcontainer.dex", 0);
 
-	 DexFile dexFile = DexFile.loadDex(dexClasses.getAbsolutePath(),
-	 context
-	 .getDir("pepitmobil", Context.MODE_PRIVATE).getAbsolutePath()
-	 + "/outputdexcontainer.dex", 0);
-	 
-	 Enumeration<String> classFileNames = dexFile.entries();
-	 while (classFileNames.hasMoreElements())
-	 {
-	     String name = classFileNames.nextElement();
-	     dexFile.loadClass(name, context.getClassLoader());	     
-	 }
-	 
+	Enumeration<String> classFileNames = dexFile.entries();
+	while (classFileNames.hasMoreElements()) {
+	    String name = classFileNames.nextElement();
+	    dexFile.loadClass(name, context.getClassLoader());
+	}
+
 	return dexFile.loadClass(className, context.getClassLoader());
     }
 
