@@ -1,5 +1,5 @@
 /**
- * @file org/pepit/plugin/Utils.java
+ * @file org/pepit/plugin/PluginFile.java
  * 
  * PepitMobil: an educational software
  * This file is a part of the PepitMobil environment
@@ -38,20 +38,7 @@ import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
 
-public class Utils {
-
-    private static String getZipFileName(org.pepit.plugin.Interface plugin) {
-	String name = new String();
-	org.pepit.plugin.Info info = plugin.getInfo();
-
-	name += info.level.toName();
-	name += "_";
-	name += info.subject.toName();
-	name += "_";
-	name += info.theme;
-	name += ".zip";
-	return name;
-    }
+public class PluginFile {
 
     public static Bitmap getImage(org.pepit.plugin.Interface plugin,
 	    String imageName) throws IOException {
@@ -89,6 +76,19 @@ public class Utils {
 	}
 
 	return dexFile.loadClass(className, context.getClassLoader());
+    }
+
+    private static String getZipFileName(org.pepit.plugin.Interface plugin) {
+	String name = new String();
+	org.pepit.plugin.Info info = plugin.getInfo();
+
+	name += info.level.toName();
+	name += "_";
+	name += info.subject.toName();
+	name += "_";
+	name += info.theme;
+	name += ".zip";
+	return name;
     }
 
 }
